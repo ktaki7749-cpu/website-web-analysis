@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ArtisanatMaroc</title>
+<style>
+body{font-family:sans-serif;background:#fdf8f0;text-align:center;padding:30px}
+h1{color:#b65d26;font-size:40px}
+button,a{padding:14px 28px;border-radius:30px;border:none;font-weight:bold;cursor:pointer;display:inline-block;margin:10px;text-decoration:none}
+#btn-devis{background:#222;color:white}
+#btn-catalogue{background:white;color:#b65d26;border:2px solid #b65d26}
+form{max-width:400px;margin:40px auto;background:white;padding:20px;border-radius:12px}
+input{width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px}
+</style>
+</head>
+<body>
+<h1>ArtisanatMaroc</h1>
+<p>Zellige, Tapis, Poterie de Kelaa</p>
+<button id="btn-devis">Demander un devis</button>
+<br>
+<a id="btn-catalogue" href="#" download>Telecharger catalogue</a>
+<form id="contact-form">
+<input placeholder="Votre nom" required>
+<button type="submit">Envoyer</button>
+</form>
+<script>
+document.getElementById('btn-devis').onclick=()=>{let m=prompt('Que voulez-vous?');if(m)window.open('https://wa.me/212600000000?text='+m)};
+document.getElementById('btn-catalogue').onclick=(e)=>{e.preventDefault();alert('Catalogue bientôt disponible!')};
+document.getElementById('contact-form').onsubmit=(e)=>{e.preventDefault();alert('Merci! On vous répond vite');e.target.reset()};
+</script>
+</body>
+</html>
